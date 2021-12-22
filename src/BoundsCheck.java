@@ -9,7 +9,16 @@ public class BoundsCheck {
         Die Methode soll true zurückgeben, wenn der Punkt außerhalb des Canvas liegt.
     */
     public static boolean intsBoundsCheck(int x, int y, int w, int h) {
-        return true;
+        // Falls x zwischen 0 und w liegt ...
+        if(x <= w && x >= 0) {
+            // ... und y zwischen 0 und h liegt...
+            if(y <= h && y >= 0) {
+                // ... wird true zurückgegeben.
+                return true;
+            }
+        }
+        // Sonst wird false zurückgegeben.
+        return false;
     }
 
     public static void main(String[] args) {
